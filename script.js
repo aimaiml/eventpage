@@ -53,5 +53,13 @@ async function injectNavbar(placeholderId = 'navbar-placeholder') {
 document.addEventListener('DOMContentLoaded', () => {
     if (document.getElementById('navbar-placeholder')) {
         injectNavbar();
+        // ensure content isn't hidden under navbar on pages without .hero
+        setTimeout(()=>{
+            const nav = document.querySelector('.navbar');
+            if (nav && !document.querySelector('.hero')) {
+                const h = nav.getBoundingClientRect().height;
+                document.body.style.paddingTop = h + 'px';
+            }
+        }, 100);
     }
 });
