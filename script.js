@@ -40,7 +40,7 @@ async function injectNavbar(placeholderId = 'navbar-placeholder') {
     const el = document.getElementById(placeholderId);
     if (!el) return;
     try {
-        const res = await fetch('/navbar.html');
+        const res = await fetch('navbar.html');
         const html = await res.text();
         el.innerHTML = html;
         initNavbar();
