@@ -189,16 +189,7 @@ section {
     position: relative;
     color: var(--accent);
 }
-.section-title h2:after {
-    content: '';
-    position: absolute;
-    width: 60%;
-    height: 4px;
-    background-color: var(--accent-light);
-    bottom: -10px;
-    left: 20%;
-    border-radius: 2px;
-}
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
