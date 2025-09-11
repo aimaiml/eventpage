@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Feedback - AIM</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<div id="navbar-placeholder"></div>
+<section class="container">
+    <div class="section-title"><h2>Feedback</h2></div>
+    <div class="form-container">
+        <p>We appreciate feedback. Please share your thoughts.</p>
+        <form>
+            <label for="fb-name">Name</label>
+            <input id="fb-name" type="text" placeholder="Your name" style="width:100%;padding:8px;margin:8px 0;border-radius:6px;border:1px solid rgba(255,255,255,0.08);background:transparent;color:var(--text-light);">
+            <label for="fb-msg">Message</label>
+            <textarea id="fb-msg" rows="6" placeholder="Your feedback" style="width:100%;padding:8px;margin:8px 0;border-radius:6px;border:1px solid rgba(255,255,255,0.08);background:transparent;color:var(--text-light);"></textarea>
+            <button class="btn" type="submit">Send Feedback</button>
+        </form>
+    </div>
+</section>
+<script>
+fetch('/navbar.html').then(r=>r.text()).then(html=>{document.getElementById('navbar-placeholder').innerHTML=html});
+</script>
+</body>
+</html>
