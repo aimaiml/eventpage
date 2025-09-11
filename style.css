@@ -1,13 +1,13 @@
 /* style.css - AIM Association of Intelligence Mind */
 :root {
-    --dark-bg: #0F172A;
+    --dark-bg: #fff;
     --accent: #3B82F6;
-    --accent-light: #60A5FA;
-    --text-light: #F8FAFC;
-    --text-gray: #CBD5E1;
-    --glass-bg: rgba(15, 23, 42, 0.8);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --card-bg: rgba(15, 23, 42, 0.6);
+    --accent-light: #2563eb;
+    --text-light: #222;
+    --text-gray: #444;
+    --glass-bg: rgba(255,255,255,0.95);
+    --glass-border: rgba(0,0,0,0.08);
+    --card-bg: #f3f4f6;
 }
 * {
     margin: 0;
@@ -63,7 +63,7 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(2px);
     background-color: var(--glass-bg);
     border-bottom: 1px solid var(--glass-border);
     z-index: 1000;
@@ -76,7 +76,7 @@ section {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     font-size: 1.8rem;
-    color: var(--text-light);
+    color: var(--accent);
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -92,7 +92,7 @@ section {
     margin-left: 2rem;
 }
 .nav-links a {
-    color: var(--text-light);
+    color: var(--accent);
     text-decoration: none;
     font-weight: 500;
     font-size: 1rem;
@@ -107,7 +107,7 @@ section {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--accent);
+    background-color: var(--accent-light);
     transition: width 0.3s ease;
 }
 .nav-links a:hover:after {
@@ -123,7 +123,7 @@ section {
 .hamburger div {
     width: 25px;
     height: 3px;
-    background-color: var(--text-light);
+    background-color: var(--accent);
     margin: 5px;
     transition: all 0.3s ease;
 }
@@ -131,7 +131,7 @@ section {
     height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1535223289827-42f1e9919769?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
+    background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1535223289827-42f1e9919769?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
     padding-top: 80px;
 }
 .hero-content {
@@ -146,7 +146,7 @@ section {
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
-    color: var(--text-gray);
+    color: var(--accent-light);
     animation: fadeInUp 1s ease 0.2s;
     animation-fill-mode: both;
 }
@@ -154,7 +154,7 @@ section {
     display: inline-block;
     padding: 0.8rem 2rem;
     background-color: var(--accent);
-    color: white;
+    color: #fff;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 500;
@@ -164,19 +164,20 @@ section {
     animation-fill-mode: both;
 }
 .btn:hover {
-    background-color: transparent;
-    color: var(--accent);
+    background-color: var(--accent-light);
+    color: #fff;
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.15);
 }
 .btn-outline {
     background-color: transparent;
     color: var(--accent);
     margin-left: 1rem;
+    border: 2px solid var(--accent);
 }
 .btn-outline:hover {
-    background-color: var(--accent);
-    color: white;
+    background-color: var(--accent-light);
+    color: #fff;
 }
 .section-title {
     text-align: center;
@@ -186,13 +187,14 @@ section {
     font-size: 2.5rem;
     display: inline-block;
     position: relative;
+    color: var(--accent);
 }
 .section-title h2:after {
     content: '';
     position: absolute;
     width: 60%;
     height: 4px;
-    background-color: var(--accent);
+    background-color: var(--accent-light);
     bottom: -10px;
     left: 20%;
     border-radius: 2px;
