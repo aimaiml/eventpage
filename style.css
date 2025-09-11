@@ -58,6 +58,7 @@
     --glass-border: rgba(0,0,0,0.08);
     --card-bg: #f3f4f6;
 }
+@import url('https://fonts.googleapis.com/css?family=Saira&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -117,6 +118,7 @@ section {
     border-bottom: 1px solid var(--glass-border);
     z-index: 1000;
     transition: all 0.3s ease;
+    font-family: 'Saira', sans-serif;
 }
 .navbar.scrolled {
     padding: 0.8rem 5%;
