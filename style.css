@@ -259,4 +259,19 @@ section {
     .section-title h2 {
         font-size: 2rem;
     }
+    /* Mobile adjustments for event form */
+    .container {
+        width: 96%;
+        padding: 0 10px;
+    }
+    .section-title h2 { font-size: 1.6rem; }
+    .form-container iframe#event-form-iframe,
+    .form-container .form-iframe {
+        min-height: 2000px; /* smaller tall fallback for phones */
+        max-width: 100%;
+    }
+    .navbar {
+        padding: 0.8rem 4%;
+    }
+    .logo { font-size: 1.2rem; }
 }
