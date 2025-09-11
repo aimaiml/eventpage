@@ -32,6 +32,24 @@ h1, h2, h3, h4, h5 {
     margin: 0 auto;
     padding: 0 15px;
 }
+
+/* Event request form container adjustments */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.form-container iframe#event-form-iframe,
+.form-container .form-iframe {
+    width: 100%;
+    max-width: 900px; /* widen as desired */
+    border: none;
+    display: block;
+    box-shadow: 0 2px 0 rgba(255,255,255,0.02);
+    background: transparent;
+}
 section {
     padding: 5rem 0;
 }
