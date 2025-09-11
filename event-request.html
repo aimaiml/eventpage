@@ -32,8 +32,8 @@
 </section>
 
 <script>
-// inject navbar
-fetch('/navbar.html').then(r=>r.text()).then(html=>{document.getElementById('navbar-placeholder').innerHTML=html});
+// inject shared navbar and initialize (use helper from script.js)
+if (typeof injectNavbar === 'function') injectNavbar();
 </script>
 </body>
 </html>
