@@ -15,15 +15,35 @@
 
 <section class="container">
     <div class="section-title"><h2>Request an Event</h2></div>
-    <div class="form-container">
-    <!-- Embedded Google Form -->
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdI_nnQcTzyB3rJsQ9MzMsj_SVtBJApdQRvpRfZHJ6zpOorwg/viewform?usp=header" class="form-iframe" title="Event Request Form"></iframe>
+    <div class="form-container" style="padding:0;">
+    <!-- Embedded Google Form - exact user-provided snippet -->
+    <iframe id="event-form-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSdI_nnQcTzyB3rJsQ9MzMsj_SVtBJApdQRvpRfZHJ6zpOorwg/viewform?embedded=true" width="640" height="3172" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </div>
 </section>
 
 <script>
 // inject shared navbar and initialize (use helper from script.js)
 if (typeof injectNavbar === 'function') injectNavbar();
+</script>
+<script>
+// resize iframe to fill remaining viewport under navbar
+function resizeEventIframe(){
+    const iframe = document.getElementById('event-form-iframe');
+    const nav = document.querySelector('.navbar');
+    if (!iframe) return;
+    const navHeight = nav ? nav.getBoundingClientRect().height : 0;
+    const top = nav ? nav.getBoundingClientRect().bottom : 0;
+    // available height = viewport height - navHeight - small margin
+    const available = window.innerHeight - navHeight - 20;
+    iframe.style.height = Math.max(available, 300) + 'px';
+}
+
+window.addEventListener('resize', () => resizeEventIframe());
+// run after DOM and navbar injection
+document.addEventListener('DOMContentLoaded', ()=>{
+    setTimeout(resizeEventIframe, 150);
+    setTimeout(resizeEventIframe, 600);
+});
 </script>
 </body>
 </html>
