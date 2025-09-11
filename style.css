@@ -44,7 +44,8 @@ h1, h2, h3, h4, h5 {
 .form-container iframe#event-form-iframe,
 .form-container .form-iframe {
     width: 100%;
-    max-width: 900px; /* widen as desired */
+    max-width: none; /* allow full container width */
+    min-height: 3400px; /* make tall so page scrollbar is used */
     border: none;
     display: block;
     box-shadow: 0 2px 0 rgba(255,255,255,0.02);

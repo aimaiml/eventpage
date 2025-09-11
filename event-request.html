@@ -31,18 +31,14 @@ function resizeEventIframe(){
     const iframe = document.getElementById('event-form-iframe');
     const nav = document.querySelector('.navbar');
     if (!iframe) return;
-    const navHeight = nav ? nav.getBoundingClientRect().height : 0;
-    const top = nav ? nav.getBoundingClientRect().bottom : 0;
-    // available height = viewport height - navHeight - small margin
-    const available = window.innerHeight - navHeight - 20;
-    iframe.style.height = Math.max(available, 300) + 'px';
+    // Let CSS min-height govern; ensure iframe does not force an internal scrollbar
+    iframe.style.height = '';
 }
 
-window.addEventListener('resize', () => resizeEventIframe());
-// run after DOM and navbar injection
+// No continuous resizing needed; keep page scrollbar for form scrolling.
 document.addEventListener('DOMContentLoaded', ()=>{
-    setTimeout(resizeEventIframe, 150);
-    setTimeout(resizeEventIframe, 600);
+    // ensure iframe height is not restricted by inline styles
+    resizeEventIframe();
 });
 </script>
 </body>
