@@ -15,6 +15,84 @@
     .form-container {
         padding: 0.5rem 0.2rem;
     }
+    
+    /* Mobile optimizations for About AIM section */
+    .section-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem !important;
+        margin-bottom: 1rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+        padding: 0 1rem;
+        line-height: 1.5;
+    }
+    
+    .about-aim-grid {
+        gap: 1.5rem;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .about-card {
+        padding: 1.5rem !important;
+        margin: 0;
+        border-radius: 12px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .card-header {
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    
+    .card-header h3 {
+        font-size: 1.25rem;
+        margin-top: 0.75rem;
+    }
+    
+    .card-icon {
+        font-size: 2rem !important;
+    }
+    
+    .feature-list {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .feature-list li {
+        margin-bottom: 1rem;
+        padding: 0.75rem;
+        font-size: 0.9rem;
+        line-height: 1.4;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+    
+    .feature-list li i {
+        font-size: 1rem;
+        margin-top: 0.2rem;
+        flex-shrink: 0;
+    }
+    
+    /* Container adjustments for mobile */
+    .container {
+        padding: 0 5%;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    #about {
+        padding: 2rem 0;
+        overflow-x: hidden;
+    }
 }
 /* Mobile adjustments for about-aim-grid and section padding */
 @media screen and (max-width: 768px) {
@@ -38,10 +116,23 @@
     
     .about-card {
         padding: 2rem;
+        margin: 0;
+        width: 100%;
+        box-sizing: border-box;
     }
     
     .section-title {
         font-size: 2.5rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+    
+    .feature-list li {
+        padding: 1rem 0.75rem;
+        font-size: 0.95rem;
     }
     
     .footer-content {
