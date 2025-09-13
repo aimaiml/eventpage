@@ -45,16 +45,22 @@
         border-radius: 12px;
         width: 100%;
         box-sizing: border-box;
+        overflow: hidden;
+        word-wrap: break-word;
     }
     
     .card-header {
         margin-bottom: 1.5rem;
         text-align: center;
+        width: 100%;
+        box-sizing: border-box;
     }
     
     .card-header h3 {
         font-size: 1.25rem;
         margin-top: 0.75rem;
+        word-wrap: break-word;
+        line-height: 1.3;
     }
     
     .card-icon {
@@ -64,21 +70,38 @@
     .feature-list {
         margin: 0;
         padding: 0;
+        width: 100%;
+        box-sizing: border-box;
+        list-style: none;
     }
     
     .feature-list li {
         margin-bottom: 1rem;
         padding: 0.75rem;
         font-size: 0.9rem;
-        line-height: 1.4;
+        line-height: 1.5;
         align-items: flex-start;
         gap: 0.75rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        display: flex;
+        width: 100%;
+        box-sizing: border-box;
     }
     
     .feature-list li i {
         font-size: 1rem;
         margin-top: 0.2rem;
         flex-shrink: 0;
+        min-width: 1.5rem;
+    }
+    
+    .feature-list li span,
+    .feature-list li {
+        flex: 1;
+        min-width: 0;
+        word-break: break-word;
     }
     
     /* Container adjustments for mobile */
